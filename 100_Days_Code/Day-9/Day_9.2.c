@@ -10,19 +10,21 @@ below 60: Grade F.*/
 int main() {
     int n;
 
-    printf("Enter your percentage: ");
+    printf("Enter your percentage (0-100): ");
     scanf("%d", &n);
 
-    if (n > 75) {
-        printf("Distinction");
-    } else if (n >= 60 && n <= 75) {
-        printf("First Class");
-    } else if (n >= 50 && n < 60) {
-        printf("Second Class");
-    } else if (n >= 40 && n < 50) {
-        printf("Pass");
+    if (n >= 90 && n <= 100) {
+        printf("Grade A");
+    } else if (n >= 80 && n <= 89) {
+        printf("Grade B");
+    } else if (n >= 70 && n <= 79) {
+        printf("Grade C");
+    } else if (n >= 60 && n <= 69) {
+        printf("Grade D");
+    } else if (n >= 0 && n < 60) {
+        printf("Grade F");
     } else {
-        printf("Fail");
+        printf("Invalid percentage entered!");
     }
 
     return 0;
